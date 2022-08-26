@@ -22,7 +22,7 @@ import {
 	LongWords,
 	LongSentences,
 	LongParagraphs,
-	DublicateWords,
+	DuplicateWords,
 	Begrepskatalog,
 	GammelnavskDictionary,
 	NrkDictionaries,
@@ -131,17 +131,17 @@ function Begrunnelse() {
 				</Switch>
 				<Show if={visSprakhjelp && begrunnelse && begrunnelse.length > 0}>
 					<Accordion>
-						<LongParagraphs content={begrunnelse} />
-						<LongSentences content={begrunnelse} />
-						<LongWords content={begrunnelse} />
-						<DublicateWords content={begrunnelse} />
+						{/* <LongParagraphs content={begrunnelse} /> */}
+						{/* <LongSentences content={begrunnelse} /> */}
+						{/* <LongWords content={begrunnelse} /> */}
+						{/* <DuplicateWords content={begrunnelse} /> */}
 						<GammelnavskDictionary content={begrunnelse} />
-						<NrkDictionaries content={begrunnelse} />
-						<AvløserordDictionary content={begrunnelse} />
-						<Begrepskatalog content={begrunnelse} />
+						{/* <NrkDictionaries content={begrunnelse} /> */}
+						{/* <AvløserordDictionary content={begrunnelse} /> */}
+						{/* <Begrepskatalog content={begrunnelse} /> */}
 						{/* <PersonalData content={begrunnelse} /> */}
-						<Lix content={begrunnelse} />
-						<WordCount content={begrunnelse} />
+						{/* <Lix content={begrunnelse} /> */}
+						{/* <WordCount content={begrunnelse} /> */}
 					</Accordion>
 				</Show>
 			</div>

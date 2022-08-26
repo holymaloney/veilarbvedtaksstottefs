@@ -33,10 +33,10 @@ function Lix(props: { content: any }) {
 	let longWordsHere = 0;
 	// Loop through the entire array of words
 	for (let i in words) {
-		if (words[i].length > 6) {
-			// +1 for every long word in document
-			longWordsHere = 1;
-		}
+		// if (words[i].length > 6) {
+		// 	// +1 for every long word in document
+		// 	longWordsHere = 1;
+		// }
 		if (words[i].length > wordLength) {
 			// +1 for every long word in document
 			longWordCounter++;

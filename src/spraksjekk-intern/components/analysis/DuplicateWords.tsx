@@ -1,12 +1,12 @@
 import { Accordion } from '@navikt/ds-react';
 
-function DublicateWords(props: { content: any }) {
+function DuplicateWords(props: { content: any }) {
 	let value = props.content;
 	value = value.replaceAll('Kontakt', '');
 	value = value.replaceAll(/\d+(?: \d+)/g, '');
 	value = value.toLowerCase();
 
-	// Find dublicate words
+	// Find duplicate words
 	let dublicateWordsList: string | number | boolean | JSX.Element[] | null | undefined = [];
 	let dublicateWordsCount = 0;
 	if (value.match(/\b(\w{2,5})\s+\1\b/g)) {
@@ -20,10 +20,10 @@ function DublicateWords(props: { content: any }) {
 	}
 	return (
 		<>
-			{dublicateWordsCount != 0 && (
+			{dublicateWordsCount !== 0 && (
 				<Accordion.Item>
 					<Accordion.Header type="button">
-						{dublicateWordsCount == 1 ? (
+						{dublicateWordsCount === 1 ? (
 							<>1 gjentakelse av like ord</>
 						) : (
 							<>{dublicateWordsCount} gjentakelser av like ord</>
@@ -31,7 +31,6 @@ function DublicateWords(props: { content: any }) {
 					</Accordion.Header>
 					<Accordion.Content className="removeAccordionPaddingBottom">
 						Gjentakelse av like ord etter hverandre:
-						<ul className="list-disc pt-5 list-inside">{dublicateWordsList}</ul>
 					</Accordion.Content>
 				</Accordion.Item>
 			)}
@@ -39,4 +38,4 @@ function DublicateWords(props: { content: any }) {
 	);
 }
 
-export default DublicateWords;
+export default DuplicateWords;
