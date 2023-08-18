@@ -18,8 +18,7 @@ jobs:
             - name: Build mock application
               run: npm run build:mock
             - name: Update GitHub pages
-              uses: softprops/action-gh-release@v1
+              uses: peaceiris/actions-gh-pages@v3
               with:
-                  token: ${{ secrets.GITHUB_TOKEN }}
-                  tag_name: github_pages
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
                   publish_dir: ./build
